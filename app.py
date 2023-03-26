@@ -31,7 +31,10 @@ def predict():
         if fun['disease'] == context['disease']:
             fungicides.append(fun)
 
-    return render_template('result.html' , data = context, rec=fungicides)
+    context['fungicides'] = fungicides
+    # return jsonify(context)
+
+    return render_template('result.html' , data = context)
 
 @app.route("/test")
 def test():
