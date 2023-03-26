@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Test</title>
+</head>
+<body>
+    <h2>Potato Leaf Disease Detection</h2>
+    <img id="img-preview" src="" alt="">
+    
+    <form method="post" action="/predict" enctype="multipart/form-data" onsubmit ="return validate(event)">
+        <input type="file" name="file" onchange="displayImage(event)">
+        <button type="submit"> Submit</button>
+    </form>
+
+    <script>
+        const displayImage = (event) =>{
+            const imgFiles = event.target.files;
+
+            if(imgFiles.length > 0){
+                const imgSrc = URL.createObjectURL(imgFiles[0]);
+                const ele = document.querySelector('#img-preview');
+
+                ele.src = imgSrc;
+                ele.width = 200;
+                ele.height = 200;
+            }
+        }
+
+        const validate = (event) => {
+            const img = document.querySelector('#img-preview');
+            if(img.src=="http://192.168.1.4:5000/test" ){
+                alert("Please Choose an Image!!");
+                return false;
+            } 
+
+            return true;
+        }
+    </script>
+</body>
+
+
+</html>

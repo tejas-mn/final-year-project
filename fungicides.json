@@ -1,0 +1,76 @@
+{
+    "fungicides" : [
+
+        {
+            "id": "1",
+            "name": "Aureofungin 46.15% W.V. SP",
+            "disease" : "Potato_Early_blight",
+            "Dosage per ha" : "",
+            "a.i. (g)" : "",
+            "Formulation (g/ml)/%" : "0.005%",
+            "Dilution in water (L)" : "750",
+            "Waiting period from last application to harvest (days)" : "30",
+            "link" : "https://www.kisanestore.com/index.php?route=product/enquiry&product_id=3128",
+            "img" : "https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png",
+            "dec" : ""
+            
+        },
+
+        {
+            "id": "2",
+            "name": "Azoxystrobin 23% SC",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "",
+            "a.i. (g)" : "125 gm",
+            "Formulation (g/ml)/%" : "500 ml",
+            "Dilution in water (L)" : "500",
+            "Waiting period from last application to harvest (days)" : "12",
+            "link" : "https://www.amazon.in/Katyayani-AZOXYSTROBIN-Systemic-Fungicide-Powerful/dp/B09J8Y5FNX",
+            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71xA6n4laxL._SL1500_.jpg",
+            "dec" : ""
+            
+        },
+        {
+            "id": "3",
+            "name": "Dimethomorph 50% WP",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "500 gm",
+            "a.i. (g)" : "1000 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "750 L",
+            "Waiting period from last application to harvest (days)" : "16",
+            "link" : "https://www.bighaat.com/products/acrobat-fungicide",
+            "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/8_800x.webp",
+            "dec" : ""
+            
+        },
+        {
+            "id": "4",
+            "name": "Mancozeb 75% WP",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "1.125-1.5 kg",
+            "a.i. (g)" : "1.5-2 kg",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "750 Lt",
+            "Waiting period from last application to harvest (days)" : "",
+            "link" : "https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb",
+            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/612m5O2dN3L._SL1000_.jpg",
+            "dec" : ""
+            
+        },
+        {
+            "id": "5",
+            "name": "Mancozeb 75% WP",
+            "disease" : "Potato_Early_blight",
+            "Dosage per ha" : "1.125-1.5 kg",
+            "a.i. (g)" : "1.5-2 kg",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "750 Lt",
+            "Waiting period from last application to harvest (days)" : "",
+            "link" : "https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb",
+            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/612m5O2dN3L._SL1000_.jpg",
+            "dec" : ""
+            
+        }
+    ]
+}
