@@ -105,7 +105,6 @@ def prediction(img_path):
             "diseased_img" : "../" + diseased_img,
             "perc_disease" : perc_disease
         }
-    
     elif predicted_class == class_names[1]:
         context = {
             "disease" : predicted_class,
@@ -116,7 +115,6 @@ def prediction(img_path):
             "diseased_img" : "../" + diseased_img,
             "perc_disease" : perc_disease
         }
-    
     elif predicted_class == class_names[2]:
         context = {
             "disease" : predicted_class,
@@ -127,5 +125,4 @@ def prediction(img_path):
             "diseased_img" : "../" + diseased_img,
             "perc_disease" : perc_disease
         }
-
     return context
