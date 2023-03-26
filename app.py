@@ -59,7 +59,6 @@ def ProcessImage(img_path):
         for j in range(0, OriginalImage.shape[1]):
             if int(g[i, j]) > ProcessingFactor:
                 Disease[i, j] = 255
-    
     new_file = img_path + "-new-diseased.jpg" 
     perc_disease = DisplayDiseasePercentage(Disease)
 
@@ -88,7 +87,6 @@ def DisplayDiseasePercentage(Disease):
             if Disease[i, j] < treshold:
                 Count += 1
     Percent = (Count / Res) * 100
-
     return str(round(Percent, 2)) + "%"
 
 
@@ -97,9 +95,7 @@ def prediction(img_path):
     predictions = model.predict(img_array)
     predicted_class = class_names[np.argmax(predictions[0])]
     confidence = round(100 * (np.max(predictions[0])), 2)
-    
     print(predicted_class, confidence)
-    
     mask_img = generate_mask(img_path)
     diseased_img , perc_disease = ProcessImage(img_path)
 
