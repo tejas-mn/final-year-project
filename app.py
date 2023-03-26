@@ -22,38 +22,24 @@ class_names = ['Potato_Early_blight', 'Potato_Late_blight', 'Potato_healthy']
 
 def load_image(img_path):
     img = image.load_img(img_path, target_size=(256, 256))
-    # (height, width, channels)
     img_tensor = image.img_to_array(img)
-    # (1, height, width, channels), add a dimension because the model expects this shape: (batch_size, height, width, channels)
     img_tensor = np.expand_dims(img_tensor, axis=0)
-
     return img_tensor
 
 def generate_mask(img_path):
     
     img =  cv2.imread(img_path)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-
-    # find the green color 
     mask_green = cv2.inRange(hsv, (36, 0, 0), (86,255,255))
-    # find the brown color
     mask_brown = cv2.inRange(hsv, (8, 60, 20), (30, 255, 255))
-    # find the yellow color in the leaf
     mask_yellow = cv2.inRange(hsv, (14, 39, 64), (40, 255, 255))
-
-    # find any of the three colors(green or brown or yellow) in the image
     #mask = cv2.bitwise_or(mask_green, mask_brown)
     #mask = cv2.bitwise_or(mask, mask_yellow)
     mask = cv2.bitwise_not(mask_green)
-
-    # Bitwise-AND mask and original image
     res = cv2.bitwise_not(img, img, mask= mask)
-
     new_file = img_path + "-new.jpg" 
-
     print(new_file)
     cv2.imwrite(new_file , res)
-
     return new_file
     
 Alpha = None
@@ -61,18 +47,13 @@ treshold = 170
 
 def ProcessImage(img_path):
     OriginalImage = cv2.imread(img_path)
-    # cv2.imshow("Original Image", OriginalImage)
     b = OriginalImage[:, :, 0]
     g = OriginalImage[:, :, 1]
     r = OriginalImage[:, :, 2]
-    # cv2.imshow("Red Channel", r)
-    # cv2.imshow("Green Channel", g)
-    # cv2.imshow("Blue Channel", b)
     Disease = r - g
     global Alpha
     Alpha = b
     GetAlpha(OriginalImage)
-    # cv2.imshow("Alpha Channel", Alpha)
     ProcessingFactor = treshold
     for i in range(0, OriginalImage.shape[0]):
         for j in range(0, OriginalImage.shape[1]):
@@ -164,9 +145,7 @@ def predict():
     filename = file.filename
     file_path = os.path.join('static/', filename)
     file.save(file_path)
-
     context = prediction(file_path)
-
     js = {}
     with open('fungicides.json', 'r') as f:
         js = json.load(f)
