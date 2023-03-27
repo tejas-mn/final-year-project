@@ -1,8 +1,7 @@
-import os
-from flask import Flask, render_template, request
-from flask import Flask,jsonify
+from flask import Flask, render_template, request,jsonify
 from utils import *
 import json
+import os
 
 app = Flask(__name__)
 
