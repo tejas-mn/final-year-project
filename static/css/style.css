@@ -51,3 +51,7 @@ a{
     color: rgb(8, 0, 77);
     text-decoration: underline;
 }
+
+p, li, img{
+    text-align: justify;
+}
