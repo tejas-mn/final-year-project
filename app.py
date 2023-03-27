@@ -1,15 +1,5 @@
 import os
-import numpy as np
-import cv2
-import pandas as pd
-from PIL import Image
-import tensorflow as tf
-import pickle
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
 from flask import Flask, render_template, request
-from tensorflow.keras.preprocessing.image import load_img
-from tensorflow.keras.preprocessing.image import img_to_array
 from flask import Flask,jsonify
 from utils import *
 import json

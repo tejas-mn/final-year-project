@@ -23,7 +23,6 @@
             if(imgFiles.length > 0){
                 const imgSrc = URL.createObjectURL(imgFiles[0]);
                 const ele = document.querySelector('#img-preview');
-
                 ele.src = imgSrc;
                 ele.width = 200;
                 ele.height = 200;
@@ -36,9 +35,9 @@
                 alert("Please Choose an Image!!");
                 return false;
             } 
-
             return true;
         }
+
     </script>
 </body>
 
