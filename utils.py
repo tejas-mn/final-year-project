@@ -31,7 +31,7 @@ def generate_mask(img_path):
     mask = cv2.bitwise_not(mask_green)
     res = cv2.bitwise_not(img, img, mask= mask)
     new_file = img_path + "-new.jpg" 
-    print(new_file)
+    # print(new_file)
     cv2.imwrite(new_file , res)
     return new_file
     
@@ -52,7 +52,7 @@ def ProcessImage(img_path):
     new_file = img_path + "-new-diseased.jpg" 
     perc_disease = DisplayDiseasePercentage(Disease)
 
-    print(new_file)
+    # print(new_file)
     cv2.imwrite(new_file , Disease)
 
     return (new_file,perc_disease)

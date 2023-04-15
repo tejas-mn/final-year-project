@@ -84,3 +84,9 @@ p{
     transition: transform .5s;;
     font-size: smaller;
 } */
+
+
+.navbar-expand-md .navbar-collapse {
+    justify-content: end;
+}
+
