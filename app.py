@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request,jsonify
+from flask_cors import CORS,cross_origin
 from werkzeug.utils import secure_filename
 from utils import *
 import json
 import os
 
 app = Flask(__name__)
+cors = CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
+# app.config['X-Content-Type-Options'] = ''
 
 ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','JPG', 'JPEG', 'PNG'])
 
@@ -12,6 +16,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/predict', methods=['POST'])
+# @cross_origin()
 def predict():
     file = request.files['file']
     filename = file.filename
@@ -48,7 +53,7 @@ def predict():
         ds = {}
         with open('disease.json', 'r') as f:
             ds = json.load(f)
-        print(ds)
+        # print(ds)
 
         data = {}
 
@@ -74,8 +79,9 @@ def predict():
             data['symptoms_para_2'] = ds['healthy']['symptoms']['desc_2']
             data['management_para_1'] = ds['healthy']['management']['desc']
             data['management'] = ds['healthy']['management']['points']
-        #data['context'] = context
-        #return jsonify(data)
+        # data['context'] = context
+        # return jsonify(data)
+        # return 'http://127.0.0.1:5002/' + str(context['diseased_img'])[3:]
     
         return render_template('results.html' , data = context,query=q , info=data)
     else:
@@ -84,7 +90,8 @@ def predict():
 
 @app.route("/")
 def index():
-    return render_template('base.html')
+    # return 'hello'
+    return render_template('home.html')
 
 if __name__ == "__main__":
-    app.run(host = '127.0.0.1', port=5000, debug=True)
+    app.run(host = '127.0.0.1', port=5002, debug=True)

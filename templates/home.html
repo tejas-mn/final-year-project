@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="{{ url_for('static', filename='Agent-Crop-Icon.png') }}">
+        <meta property="og:title" content="Potato Leaf Disease Detection">
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='/assets/Agent-Crop-Icon.png') }}">
+        <title>Home</title>
+    </head>
+    <body>
+        <header class="navbar navbar-expand-md navbar-dark nav-color fixed-top">
+            <nav class="container-fluid flex-wrap flex-md-nowrap">
+                <a class="navbar-brand p-1 me-2" href="/">
+                    <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> &lt PLD / &gt</h3>
+                </a>
+                
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse pt-2 py-md-0" id="bdNavbar">
+                    <ul class="navbar-nav flex-grow flex-wrap bd-navbar-nav">
+                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#">Home</a></li>
+                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#features">Features</a></li>
+                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#privacy">Privacy</a></li>
+                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-shrink-0">
+
+            <div class="container px-4 px-md-3">
+                <div class="row align-items-lg-center align-items-md-center mt-4">
+                    <div class="col-9 mx-auto col-md-6 order-md-4 col-lg-5">
+                        <img src="{{ url_for('static', filename='/assets/pngegg.png') }}" id="crop-img" alt="Agent Crop Logo" height="500" width="500" class="img-fluid">
+                    </div>
+                    <div class="col justify-content-center pt-4">
+                        <h1 class="mb-3 custom-font">Potato Leaf Disease Detection using Convolutional Neural Networks(CNN)</h1>
+                        <form action = "/" method = "POST" enctype = "multipart/form-data">
+                            <div>
+                                <input type="file" name="hiddenfiles" id="hiddenfiles" multiple hidden>
+                                <div class="pt-2">
+                                    <p>Predict Early Blight and Late Blight in Potato Leaves using Deep Learning.</p>
+                                    <p>Click on Predict now to get started</p>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div>
+                            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Predict Now
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog  modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel" style="color:black">Upload an Image</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="img-fluid rounded mx-auto d-block" id="img-preview" src="" alt="" style="width: 200px; height: 200px; display: none !important;" />
+                                        <form  method="post" action="/predict" enctype="multipart/form-data">
+                                                <!-- <label for="file" class="form-label" style="color: black;">Upload Your Images Here: </label> -->
+                                                <input class="form-control mt-2" type="file" name="file" accept=".jpg, .png, .jpeg, image/jpeg, image/png" id="files" onchange="displayImage(event)" required>
+                                                <hr style="color: black;">
+                                                <button  type="submit" class="mt-0 btn btn-secondary" style="float: right;">Predict</button>
+                                        </form>
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="image_preview" class="row mt-3 justify-content-center"></div>
+            </div>
+
+
+
+
+                <br>
+                <div class="container" id="crops-list">
+                    <h1 class="text-center">Algorithms Used</h1>
+                </div>
+                <br>
+
+                <div class="container custom-bg-color rounded" style="padding-top: 12px; padding-bottom: 12px;">
+                    <nav>
+                        <div class="nav nav-tabs crops-list-tab" style="border: none; padding-bottom: 12px;" id="nav-tab" role="tablist">
+                            <button class="nav-link crops-list-tab active rounded" id="nav-apple-tab" data-bs-toggle="tab" data-bs-target="#nav-apple" type="button" role="tab" aria-controls="nav-apple" aria-selected="true">CNN</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-bell-pepper-tab" data-bs-toggle="tab" data-bs-target="#nav-bell-pepper" type="button" role="tab" aria-controls="nav-bell-pepper" aria-selected="false">VGG-16</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-blueberry-tab" data-bs-toggle="tab" data-bs-target="#nav-blueberry" type="button" role="tab" aria-controls="nav-blueberry" aria-selected="false">VGG-19</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Inception V3</button>
+                            
+                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Resnet50</button>
+                            
+                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Resnet15v2</button>
+                            
+                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Xception</button>
+                        </div>
+                    </nav>
+                
+                    <div class="tab-content custom-bg-color-2 rounded" style="padding-bottom: 17px; padding-top: 17px;" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-apple" role="tabpanel" aria-labelledby="nav-apple-tab">
+                        
+                            <div class="container-fluid ">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='assets/late.jpg') }}" alt="" width="200" height="200">
+                                    </div>
+                                    <div class="col-lg-9 col-md-6 col-sm-12 col-xs-12">
+                                        <p style="text-align: justify;">Late blight is a disease which is common in solanaceous plants like potatoes, tomatoes, etc. It is caused by an oomycete pathogen, i.e., Phytophthora infestans. Late blight in a potato is a lethal disease which can have the potential to devastate the crop. It can attack the crop at any stage and can infect the foliage and tubers. The initial symptoms are visible with small spots on the potato that appear circular and are light to dark green in colour. This is a destructive disease, which is why it becomes vital to understand the symptoms and manage them in the early stages. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-bell-pepper" role="tabpanel" aria-labelledby="nav-bell-pepper-tab">
+                            <ul>
+                                <p>
+                                    Symptoms of this disease start with small circular spots that appear light to dark green in colour. These symptoms are visible on the leaves on the lower side, which gradually shifts towards the leaf tips or edges.
+                                    Some visible symptoms of the disease are listed below. 
+                                </p>
+                                    <ul>
+                                        <li>Watery blisters of green or yellow colour appear on the leaf foliage.</li>
+                                        <li>Brown or black lesions appear on the lower leaf.</li>
+                                        <li>Leaf rotting after 1-4 days of infection; tan-coloured blisters appear in dry weather, while blue-grey mycelium grows in moist weather.</li>
+                                        <li>Rotting in tubers, which are of two types: dry rot and wet rot.</li>
+                                        <li>Dry rots are fungal growth which is 5-15 mm deep; the colour ranges from bluish-black to reddish-brown.</li>
+                                        <li>Wet rots are deeper rots with 24-45 mm, which infect the entire potato. The colonies appear to be white, and they secrete water.</li>
+                                        <li style="visibility: hidden;"></li>
+                                    </ul>
+                                <p>  
+                                    Apart from the above-mentioned symptoms, the weather also affects these lesions, and they are visible more during winters (cold and moist weather). They appear to be larger and dark brown in colour. As the infection increases, the blight kills the leaves in a few days. 
+                                    The lesions are not only limited to leaves but also move ahead to petioles and stems.
+                                </p>
+                            </ul>
+                            
+                        </div>
+                        <div class="tab-pane fade" id="nav-blueberry" role="tabpanel" aria-labelledby="nav-blueberry-tab">
+                            <ul>
+                                <p>
+                                    Effective control of this disease requires implementation of an integrated disease management approach. Late blight is a community disease, and effective management requires community management. Here are methods to help control the disease:
+                                </p>
+                                <ul>
+                                    <li>Destroy all cull and volunteer potatoes.</li>
+                                    <li>Plant late blight-free seed tubers.</li>
+                                    <li>Do not mix seed lots because cutting can transmit late blight.</li>
+                                    <li>Use a seed piece fungicide treatment labeled for control of late blight. Recommended seed treatments include Revus, Reason and mancozeb.</li>
+                                    <li>Avoid planting problem areas that may remain wet for extended periods or may be difficult to spray (the field near the center of the pivot, along powerlines and tree lines).</li>
+                                    <li>Avoid excessive and/or nighttime irrigation.</li>
+                                    <li>Eliminate sources of inoculum such as hairy nightshade weed species and volunteer potatoes.</li>
+                                    <li>Scout fields regularly, especially in low, wet areas, along tree lines, at the center of the pivot and other areas that remain wet for longer periods where late blight first may occur.</li>
+                                    <li>Use foliar fungicides on a regular and continuing schedule. Once late blight is present, only foliar fungicide applications can manage late blight in the field.</li>
+                                    <li>Quickly destroy hot spots of late blight.</li>
+                                    <li>Kill vines completely two to three weeks before harvest. Consider adding a fungicide when vine killing if there is late blight pressure.</li>
+                                    <li>Applying phosphorous acid to potatoes after harvest and before piling can prevent infection and the spread of late blight in storage.</li>
+                                    <li>Monitor home garden and market tomatoes near you for late blight. Late blight can move from these local sources to potato fields.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="nav-cherry" role="tabpanel" aria-labelledby="nav-cherry-tab">
+
+                            <div class="container p-2">
+                                <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="card h-1 shadow-sm">
+                                            <div class="text-center">
+                                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                                    <!-- <img class="shadow" widht="250px" height="250px" src="https://source.unsplash.com/rDEOVtE7vOs/600x600" alt="Another Image zoom-on-hover effect"> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class=" mb-0 text-uppercase text-center role text-dark fw-bold">Aureofungin 46.15% W.V. SP</p>
+                                                <hr style="color: black;"/>
+                                                <img class="img-fluid rounded mx-auto d-block" src="https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png" alt="" width="120" height="120">
+                                                <p class="mb-0 text-center role text-dark">Dosage per ha : </p>
+                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : 750</p>
+                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : 30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="privacy">
+                <div class="container px-4 px-md-3 pt-5">
+                    <div class="row align-items-lg-center align-items-md-center">
+                        <div class="col-10 mx-auto col-md-6 order-md-1 col-lg-5">
+                            <img src="{{ url_for('static', filename='assets/privacy.png') }}" alt="Privacy" class="img-fluid" width="400" height="400">
+                        </div>
+                        <div class="col pt-4"> 
+                            <h2>Privacy</h2>
+                            <p>Agent Crop respects your privacy. Your uploaded Images get deleted after an hour. It doesn't have any annoying ads so that you can predict Crops Diseases without any interruption.</p>
+                            <h4>Privacy-First Features:</h4>
+                            <ul>
+                                <li>No Data Collection</li>
+                                <li>No Cookies stored in your browser</li>
+                                <li>Automatic deletion of your Images</li>
+                                <li>No Ads</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="features">
+                <div class="cnt container-fluid">
+                    <div class="row align-items-center h-100">
+                      <div class="cnt container rounded">
+                        <h1 class="text-center">Technologies Used</h1>
+                        <br>    
+                        <div class="slider">
+                          <div class="logos">
+                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200">
+                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/241/797/png-transparent-cascading-style-sheets-css3-javascript-logo-world-wide-web-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
+                            <img class="item img-fluid rounded mx-auto d" src="https://w1.pngwing.com/pngs/951/574/png-transparent-react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-thumbnail.png" alt="" width="200" height="200">
+                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/447/294/png-transparent-python-javascript-logo-clojure-python-logo-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
+                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/871/987/png-transparent-tensorflow-google-brain-machine-learning-deep-learning-google-angle-text-orange-thumbnail.png" alt="" width="200" height="200">    
+                          </div>
+                            <!-- <div class="logos">
+                                <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200">
+                                <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/241/797/png-transparent-cascading-style-sheets-css3-javascript-logo-world-wide-web-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
+                                <img class="item img-fluid rounded mx-auto d" src="https://w1.pngwing.com/pngs/951/574/png-transparent-react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-thumbnail.png" alt="" width="200" height="200">
+                                <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/447/294/png-transparent-python-javascript-logo-clojure-python-logo-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
+                                <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/871/987/png-transparent-tensorflow-google-brain-machine-learning-deep-learning-google-angle-text-orange-thumbnail.png" alt="" width="200" height="200">    
+                            </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div id="about">
+                <div class="container pt-5">
+                    <h2>About</h2>
+                    <p>Agent Crop is an Open Source Project created with intention to help detect Crops Diseases and suggest possible cure for them.</p>
+                    <p>You can find the source code for the Agent Crop on the GitHub:</p>
+                    <!-- <a href="https://github.com/Aashrut/Agent-Crop" target="_blank" class="btn btn-light">Agent Crop GitHub</a> -->
+                    <br />
+
+                </div>
+            </div>
+            <br>
+        </main>
+
+        <footer class="nav-color mt-auto text-center footer py-3 mb-0">
+            <div class="container">
+                <p></p>
+                <p class="mb-0">Made With Flask</p>
+            </div>
+        </footer>
+        
+        <script>
+            const displayImage = (event) =>{
+                const imgFiles = event.target.files;
+    
+                if(imgFiles.length > 0){
+                    const imgSrc = URL.createObjectURL(imgFiles[0]);
+                    const ele = document.querySelector('#img-preview');
+                    ele.style.display = 'block';
+                    ele.src = imgSrc;
+                    ele.width = 200;
+                    ele.height = 200;
+                }
+            }
+    
+            const validate = (event) => {
+                const img = document.querySelector('#img-preview');
+                if(img.src=="http://192.168.1.4:5000/test" ){
+                    alert("Please Choose an Image!!");
+                    return false;
+                } 
+                return true;
+            }
+    
+        </script>
+
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     
+    </body>
+</html>
