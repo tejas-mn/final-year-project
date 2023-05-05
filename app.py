@@ -83,7 +83,7 @@ def predict():
         # return jsonify(data)
         # return 'http://127.0.0.1:5002/' + str(context['diseased_img'])[3:]
     
-        return render_template('results.html' , data = context,query=q , info=data)
+        return render_template('results.html' , data = context,query=q , info=data, title="Results")
     else:
         return {"error" : "Invalid Image"}
 
@@ -91,7 +91,7 @@ def predict():
 @app.route("/")
 def index():
     # return 'hello'
-    return render_template('home.html')
+    return render_template('home.html', title="Home")
 
 if __name__ == "__main__":
-    app.run(host = '127.0.0.1', port=5002, debug=True)
+    app.run(host = '192.168.1.4', port=5002, debug=True)

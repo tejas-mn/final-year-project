@@ -1,45 +1,10 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="{{ url_for('static', filename='Agent-Crop-Icon.png') }}">
-        <meta property="og:title" content="Potato Leaf Disease Detection">
-        
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="{{ url_for('static', filename='/assets/Agent-Crop-Icon.png') }}">
-        <title>Home</title>
-    </head>
-    <body>
-        <header class="navbar navbar-expand-md navbar-dark nav-color fixed-top">
-            <nav class="container-fluid flex-wrap flex-md-nowrap">
-                <a class="navbar-brand p-1 me-2" href="/">
-                    <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> &lt PLD / &gt</h3>
-                </a>
-                
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse pt-2 py-md-0" id="bdNavbar">
-                    <ul class="navbar-nav flex-grow flex-wrap bd-navbar-nav">
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#">Home</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#features">Features</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#privacy">Privacy</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#about">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+{%extends "base.html" %}
+
+{%block home%}
 
         <main class="flex-shrink-0">
 
-            <div class="container px-4 px-md-3">
+            <div class="container px-4 px-md-3" style="margin-top: 4rem !important;">
                 <div class="row align-items-lg-center align-items-md-center mt-4">
                     <div class="col-9 mx-auto col-md-6 order-md-4 col-lg-5">
                         <img src="{{ url_for('static', filename='/assets/pngegg.png') }}" id="crop-img" alt="Agent Crop Logo" height="500" width="500" class="img-fluid">
@@ -74,6 +39,7 @@
                                         <form  method="post" action="/predict" enctype="multipart/form-data">
                                                 <!-- <label for="file" class="form-label" style="color: black;">Upload Your Images Here: </label> -->
                                                 <input class="form-control mt-2" type="file" name="file" accept=".jpg, .png, .jpeg, image/jpeg, image/png" id="files" onchange="displayImage(event)" required>
+                                                <p id="size"></p>
                                                 <hr style="color: black;">
                                                 <button  type="submit" class="mt-0 btn btn-secondary" style="float: right;">Predict</button>
                                         </form>
@@ -333,13 +299,13 @@
                     </div>
                 </div>
             </div>
-
+<br>
             <div id="features">
                 <div class="cnt container-fluid">
                     <div class="row align-items-center h-100">
                       <div class="cnt container rounded">
                         <h1 class="text-center">Technologies Used</h1>
-                        <br>    
+                        
                         <div class="slider">
                           <div class="logos">
                             <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200">
@@ -348,6 +314,7 @@
                             <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/447/294/png-transparent-python-javascript-logo-clojure-python-logo-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
                             <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/871/987/png-transparent-tensorflow-google-brain-machine-learning-deep-learning-google-angle-text-orange-thumbnail.png" alt="" width="200" height="200">    
                           </div>
+                          
                             <!-- <div class="logos">
                                 <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200">
                                 <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/241/797/png-transparent-cascading-style-sheets-css3-javascript-logo-world-wide-web-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
@@ -374,41 +341,4 @@
             <br>
         </main>
 
-        <footer class="nav-color mt-auto text-center footer py-3 mb-0">
-            <div class="container">
-                <p></p>
-                <p class="mb-0">Made With Flask</p>
-            </div>
-        </footer>
-        
-        <script>
-            const displayImage = (event) =>{
-                const imgFiles = event.target.files;
-    
-                if(imgFiles.length > 0){
-                    const imgSrc = URL.createObjectURL(imgFiles[0]);
-                    const ele = document.querySelector('#img-preview');
-                    ele.style.display = 'block';
-                    ele.src = imgSrc;
-                    ele.width = 200;
-                    ele.height = 200;
-                }
-            }
-    
-            const validate = (event) => {
-                const img = document.querySelector('#img-preview');
-                if(img.src=="http://192.168.1.4:5000/test" ){
-                    alert("Please Choose an Image!!");
-                    return false;
-                } 
-                return true;
-            }
-    
-        </script>
-
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-     
-    </body>
-</html>
+{%endblock home%}

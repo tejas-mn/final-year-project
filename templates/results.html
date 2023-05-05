@@ -1,41 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="{{ url_for('static', filename='Agent-Crop-Icon.png') }}">
-        <meta property="og:title" content="Potato Leaf Disease Detection">
-
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="{{ url_for('static', filename='/assets/Agent-Crop-Icon.png') }}">
-        <title>Results</title>
-    </head>
-    <body>
-        <header class="navbar navbar-expand-md navbar-dark nav-color fixed-top">
-            <nav class="container-fluid flex-wrap flex-md-nowrap">
-                <a class="navbar-brand p-1 me-2" href="/">
-                    <img src="{{ url_for('static', filename='./assets/Agent-Crop-Icon.png') }}"  width="40" height="40" class="d-inline-block align-text-center rounded" alt="">
-                </a>
-                
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse pt-2 py-md-0" id="bdNavbar">
-                    <ul class="navbar-nav flex-grow flex-wrap bd-navbar-nav">
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="/">Home</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#features">Features</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#privacy">Privacy</a></li>
-                        <li class="nav-item col-6 col-md-auto"><a class="nav-link p-2" href="#about">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+{%extends "base.html"%}
+{%block result%}
 
         <main class="flex-shrink-0">
 
@@ -157,45 +121,7 @@
 
                 <br>
                 <br>
-
           
         </main>
 
-        <footer class="nav-color mt-auto text-center footer py-3 mb-0">
-            <div class="container">
-                <p> </p>
-                <p class="mb-0">Made With Flask</p>
-            </div>
-        </footer>
-        
-        <script>
-            const displayImage = (event) =>{
-                const imgFiles = event.target.files;
-    
-                if(imgFiles.length > 0){
-                    const imgSrc = URL.createObjectURL(imgFiles[0]);
-                    const ele = document.querySelector('#img-preview');
-                    ele.style.display = 'block';
-                    ele.src = imgSrc;
-                    ele.width = 200;
-                    ele.height = 200;
-                }
-            }
-    
-            const validate = (event) => {
-                const img = document.querySelector('#img-preview');
-                // if(img.src=="http://192.168.1.4:5000/test" ){
-                //     alert("Please Choose an Image!!");
-                //     return false;
-                // } 
-                return true;
-            }
-    
-        </script>
-
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-            
-    </body>
-</html>
+{%endblock result%}

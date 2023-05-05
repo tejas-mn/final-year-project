@@ -1,10 +1,8 @@
-import os
 import numpy as np
 import cv2
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing.image import load_img
-from tensorflow.keras.preprocessing.image import img_to_array
+
 
 # loading models
 model = tf.keras.models.load_model('./jupyter/Best_CNN_march_30_epoch.h5')

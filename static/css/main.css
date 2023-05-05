@@ -95,12 +95,14 @@ overflow: hidden;
 }
 
 .cnt .slider {
-animation: slidein 30s linear infinite;
+/* animation: slidein 30s linear infinite; */
 white-space: nowrap;
 }
 
 .cnt .slider .logos {
 /* width: 100%; */
+transform: scale(0.7);
+transition: 1s;
 display: flex;
 margin: 0px 0;
 flex-direction: row;
@@ -111,11 +113,19 @@ flex-wrap: wrap;
 
 }
 
+
+
 .cnt .slider .logos .item {
 /* width: calc(100% / 5); */
 animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 width: calc(100% /5);
     padding: 20px;
+    transition: 1s;
+}
+
+.item:hover{
+    transition: 1s;
+    transform: scale(1.1);
 }
 
 @keyframes slidein {
