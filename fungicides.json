@@ -71,6 +71,45 @@
             "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/612m5O2dN3L._SL1000_.jpg",
             "dec" : ""
             
+        },
+        {
+            "id": "6",
+            "name": "Firestone-captan-70-hexaconazole-5-wp",
+            "disease" : "Potato_Early_blight",
+            "Dosage per ha" : "375-750 gm",
+            "a.i. (g)" : "500-1000 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "500 lt",
+            "Waiting period from last application to harvest (days)" : "21 days",
+            "link" : "https://farmmate.in/products/firestone-captan-70-hexaconazole-5-wp-fungicide?type=product-history",
+            "img" : "https://5.imimg.com/data5/ECOM/Default/2023/3/WC/DR/AZ/50742170/firestonenew-500x500.png",
+            "dec" : ""
+        },
+        {
+            "id": "7",
+            "name": "Firestone-captan-70-hexaconazole-5-wp",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "375-750 gm",
+            "a.i. (g)" : "500-1000 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "500 lt",
+            "Waiting period from last application to harvest (days)" : "21 days",
+            "link" : "https://farmmate.in/products/firestone-captan-70-hexaconazole-5-wp-fungicide?type=product-history",
+            "img" : "https://5.imimg.com/data5/ECOM/Default/2023/3/WC/DR/AZ/50742170/firestonenew-500x500.png",
+            "dec" : ""
+        },
+        {
+            "id": "8",
+            "name": "Carbendazim 25%+ Mancozeb 50% WS",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "375-750 gm",
+            "a.i. (g)" : "500-1000 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "500 lt",
+            "Waiting period from last application to harvest (days)" : "21 days",
+            "link" : "https://kisancenter.in/product/23168981/UPL-STARTUP-SAAF-Fungicide---Carbendazim-12----Mancozeb-63--WS-?utm_source=GMC&gclid=Cj0KCQjwt_qgBhDFARIsABcDjOdC5qNovQNL-NhpPTSmSR7uMEIugPeK7H54l9i-uKe-W2Eaanx16XYaAmXpEALw_wcB",
+            "img" : "https://agribegri.com/productimage/e6fbadff9a24572ee0a55f7685c5e4fb-05-17-22-12-36-57.JPG",
+            "dec" : ""
         }
     ]
 }

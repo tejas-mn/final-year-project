@@ -62,22 +62,33 @@
         }
     },
     "healthy":{
-        "about" : "",
+        "about" : "A healthy potato leaf will typically be green in color and have a smooth, even surface. The leaf should be relatively free of blemishes, such as spots or discoloration, which can be a sign of disease or insect damage.  Healthy potato leaves are an important indicator of the plant's overall health and can help to identify potential problems before they become more severe.",
         "symptoms": {
-            "desc_1" : "Symptoms of this disease start with small circular spots that appear light to dark green in colour. These symptoms are visible on the leaves on the lower side, which gradually shifts towards the leaf tips or edges. Some visible symptoms of the disease are listed below.",
+            "desc_1" : "There are typically no specific symptoms for healthy potato leaves. Rather, healthy potato leaves are characterized by the absence of symptoms that would indicate disease or stress. Here are some general characteristics of healthy potato leaves:",
             "points" : [
-                "Watery blisters of green or yellow colour appear on the leaf foliage.",
-                "Brown or black lesions appear on the lower leaf.",
-                "Leaf rotting after 1-4 days of infection; tan-coloured blisters appear in dry weather, while blue-grey mycelium grows in moist weather.",
-                "Rotting in tubers, which are of two types: dry rot and wet rot.",
-                "Dry rots are fungal growth which is 5-15 mm deep; the colour ranges from bluish-black to reddish-brown.",
-                "Wet rots are deeper rots with 24-45 mm, which infect the entire potato. The colonies appear to be white, and they secrete water."
+                "Color: Healthy potato leaves are typically a vibrant green color. The color should be consistent across the entire leaf surface.",
+
+                "Texture: Healthy potato leaves should have a smooth, even texture. The surface of the leaf should not be rough, bumpy, or have any signs of damage.",
+
+                "Shape and size: Healthy potato leaves should be uniform in shape and size. The leaves should not be abnormally small or misshapen.",
+
+                "Sturdiness: Healthy potato leaves should be sturdy and able to support the weight of the plant's foliage. The leaves should not be drooping or wilting, which can be a sign of overwatering, underwatering, or disease."
             ],
-            "desc_2":"Apart from the above-mentioned symptoms, the weather also affects these lesions, and they are visible more during winters (cold and moist weather). They appear to be larger and dark brown in colour. As the infection increases, the blight kills the leaves in a few days. The lesions are not only limited to leaves but also move ahead to petioles and stems."
+            "desc_2":"Overall, healthy potato leaves are an important part of a healthy potato plant. They provide the plant with the energy it needs to grow and produce tubers, and they can help to indicate when there may be issues with the plant's health or growing conditions."
         },
         "management": {
-            "desc" : "",
-            "points" : []
+            "desc" : "Managing healthy potato leaves involves maintaining optimal growing conditions and taking preventative measures to avoid potential disease and pest issues. Here are some key management practices for maintaining healthy potato leaves:",
+            "points" : [
+                "Proper watering: Water the potato plants consistently, making sure not to overwater or underwater. Keep the soil moist, but not waterlogged. Overwatering can lead to root rot and fungal diseases, while underwatering can cause the leaves to wilt and stress the plant.",
+
+                "Fertilization: Apply appropriate fertilizers to ensure that the potato plants receive the necessary nutrients for optimal growth and development. Nitrogen, phosphorus, and potassium are important macronutrients that potato plants require in large quantities.",
+
+                "Pest management: Monitor potato plants regularly for signs of insect pests, such as aphids, flea beetles, and potato beetles. Use appropriate methods, such as insecticidal sprays or row covers, to control these pests if necessary.",
+
+                "Disease management: Potato plants can be susceptible to a variety of diseases, including late blight, early blight, and blackleg. To prevent these diseases, practice crop rotation, remove diseased plant material, and use appropriate fungicides when necessary.",
+
+                "Soil management: Maintain healthy soil by adding organic matter, such as compost or well-rotted manure, to improve soil structure and fertility. Test the soil regularly to ensure that the pH is within the optimal range for potato growth (between 5.0 and 6.0)."
+            ]
         }
     }
 }

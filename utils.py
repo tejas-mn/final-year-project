@@ -33,6 +33,26 @@ def generate_mask(img_path):
     cv2.imwrite(new_file , res)
     return new_file
     
+def segment_image(file):
+    img = cv2.imread(file)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    lower_green = np.array([25,0,20])
+    upper_green = np.array([100,255,255])
+    mask = cv2.inRange(hsv_img, lower_green, upper_green)
+    result = cv2.bitwise_and(img, img, mask=mask)
+    lower_brown = np.array([10,0,10])
+    upper_brown = np.array([30,255,255])
+    disease_mask = cv2.inRange(hsv_img, lower_brown, upper_brown)
+    disease_result = cv2.bitwise_and(img, img, mask=disease_mask)
+    final_mask = mask + disease_mask
+    final_result = cv2.bitwise_and(img, img, mask=final_mask)
+    # output_path='/Segmented/'+os.path.basename(os.path.dirname(file))+'/'+os.path.basename(file)
+    new_file = file + "-segmented-.jpg" 
+    cv2.imwrite(new_file,final_result)
+
+    return new_file
+
 def ProcessImage(img_path):
     OriginalImage = cv2.imread(img_path)
     b = OriginalImage[:, :, 0]
@@ -85,6 +105,7 @@ def prediction(img_path):
     confidence = round(100 * (np.max(predictions[0])), 2)
     print(predicted_class, confidence)
     mask_img = generate_mask(img_path)
+    # mask_img = segment_image(img_path)
     diseased_img , perc_disease = ProcessImage(img_path)
 
     context = {}

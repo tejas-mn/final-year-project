@@ -31,12 +31,15 @@ def predict():
         file.save(file_path)
 
         context = prediction(file_path)
+
         js = {}
         with open('fungicides.json', 'r') as f:
             js = json.load(f)
         fungicides = []
         for fun in js['fungicides']:
             if fun['disease'] == context['disease']:
+                fungicides.append(fun)
+            if context['disease']=='Potato_healthy':
                 fungicides.append(fun)
 
         context['fungicides'] = fungicides
