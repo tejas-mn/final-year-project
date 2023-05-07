@@ -5,8 +5,6 @@ from utils import *
 from delete import *
 import json
 import os
-import sched
-import threading
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -17,6 +15,7 @@ ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','JPG', 'JPEG', 'PNG'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @app.route('/predict', methods=['POST'])
 # @cross_origin()
@@ -99,5 +98,5 @@ def index():
     return render_template('home.html', title="Home")
 
 if __name__ == "__main__":
-    scheduleDelete('static', 1)
+    scheduleDelete('static', 4) #delete every 2 min
     app.run(debug=True, threaded=False)
