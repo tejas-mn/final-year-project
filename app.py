@@ -2,8 +2,11 @@ from flask import Flask, render_template, request,jsonify
 from flask_cors import CORS,cross_origin
 from werkzeug.utils import secure_filename
 from utils import *
+from delete import *
 import json
 import os
+import sched
+import threading
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -93,8 +96,8 @@ def predict():
 
 @app.route("/")
 def index():
-    # return 'hello'
     return render_template('home.html', title="Home")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    scheduleDelete('static', 1)
+    app.run(debug=True, threaded=False)

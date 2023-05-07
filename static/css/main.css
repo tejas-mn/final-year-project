@@ -113,8 +113,6 @@ flex-wrap: wrap;
 
 }
 
-
-
 .cnt .slider .logos .item {
 /* width: calc(100% / 5); */
 animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
@@ -144,5 +142,6 @@ to {
 100% {
     opacity: 1;
 }
-  }
+
+}
   
