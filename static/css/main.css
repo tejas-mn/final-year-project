@@ -1,3 +1,7 @@
+/* *{
+    outline: 1px solid white;
+} */
+
 html {
     scroll-behavior: smooth;
 }
@@ -85,6 +89,10 @@ p{
     font-size: smaller;
 } */
 
+ol, ul{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 .navbar-expand-md .navbar-collapse {
     justify-content: end;
@@ -144,4 +152,31 @@ to {
 }
 
 }
-  
+
+/*below 600px width this works */
+@media only screen and (max-width: 767px) {
+    main > :first-child{
+      /* background-color: lightblue !important; */
+      text-align: center;
+    }
+    /* .image-holder {
+        flex-direction: column;
+      
+    }
+
+    .image-holder  > div{
+      
+        transform: scale(.6);
+    } */
+  }
+
+  iframe{
+    width: 100% !important;
+    height: 800px;
+    /* /* zoom: 0.75; */
+    /*overflow: hidden; */
+  }
+
+  .rssapp-list {
+    max-width: 95% !important;
+  }

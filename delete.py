@@ -1,4 +1,3 @@
-# importing required modules
 import os
 import time
 import threading
@@ -7,7 +6,7 @@ current_time = time.time()
   
 # "day" is the number of seconds in a day : 86400
 day = 30.0
-  
+
 ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','JPG', 'JPEG', 'PNG'])
 
 def allowed_file(filename):

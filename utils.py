@@ -3,10 +3,13 @@ import cv2
 import tensorflow as tf
 import threading
 from tensorflow.keras.preprocessing import image
-
+from lite import predictLite
 
 # loading models
-model = tf.keras.models.load_model('./jupyter/Best_CNN_march_30_epoch.h5')
+MODEL_PATH = './jupyter/Best_CNN_march_30_epoch.h5'
+LITE_MODEL_PATH = 'cnn.tflite'
+LABEL_PATH = 'labels.txt'
+model = tf.keras.models.load_model(MODEL_PATH)
 class_names = ['Potato_Early_blight', 'Potato_Late_blight', 'Potato_healthy']
 
 Alpha = None
@@ -101,10 +104,15 @@ def DisplayDiseasePercentage(Disease):
 
 def prediction(img_path):
     img_array = load_image(img_path)
+    
     predictions = model.predict(img_array)
     predicted_class = class_names[np.argmax(predictions[0])]
+    
     confidence = round(100 * (np.max(predictions[0])), 2)
     print(predicted_class, confidence)
+
+    #predicted_class,confidence,_ = predictLite(LITE_MODEL_PATH,img_path,LABEL_PATH)
+
     mask_img = generate_mask(img_path)
     # mask_img = segment_image(img_path)
     diseased_img , perc_disease = ProcessImage(img_path)

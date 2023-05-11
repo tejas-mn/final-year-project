@@ -92,11 +92,10 @@ def predict():
     else:
         return {"error" : "Invalid Image"}
 
-
 @app.route("/")
 def index():
     return render_template('home.html', title="Home")
 
 if __name__ == "__main__":
-    scheduleDelete('static', 4) #delete every 2 min
+    scheduleDelete('static', 2) #delete every 1 min
     app.run(debug=True, threaded=False)
