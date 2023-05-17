@@ -3,12 +3,10 @@
 ===Changes===
 
 home-page : 
- # navbar links
  update algorithms used with their graphs and confusion matrix
  privacy / features
  technologies used :  add still more
  about us
- # footer - team member names copyright etc
  
 result-page :
  add more fungicides and fill their data
