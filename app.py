@@ -97,5 +97,5 @@ def index():
     return render_template('home.html', title="Home")
 
 if __name__ == "__main__":
-    scheduleDelete('static', 2) #delete every 1 min
-    app.run(debug=True, threaded=False)
+    scheduleDelete('static', 10) #delete every 1 min
+    app.run()

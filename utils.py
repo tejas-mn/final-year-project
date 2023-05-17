@@ -3,7 +3,7 @@ import cv2
 import tensorflow as tf
 import threading
 from tensorflow.keras.preprocessing import image
-from lite import predictLite
+# from lite import predictLite
 
 # loading models
 MODEL_PATH = './jupyter/Best_CNN_march_30_epoch.h5'
@@ -21,8 +21,7 @@ def load_image(img_path):
     img_tensor = np.expand_dims(img_tensor, axis=0)
     return img_tensor
 
-def generate_mask(img_path):
-    
+def generate_mask(img_path):    
     img =  cv2.imread(img_path)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     mask_green = cv2.inRange(hsv, (36, 0, 0), (86,255,255))
