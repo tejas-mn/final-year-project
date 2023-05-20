@@ -14,7 +14,7 @@
             "desc_2":"Apart from the above-mentioned symptoms, the weather also affects these lesions, and they are visible more during winters (cold and moist weather). They appear to be larger and dark brown in colour. As the infection increases, the blight kills the leaves in a few days. The lesions are not only limited to leaves but also move ahead to petioles and stems."
         },
         "management": {
-            "desc" : "",
+            "desc" : "Effective control of this disease requires implementation of an integrated disease management approach. Early blight is a community disease, and effective management requires community management. Here are methods to help control the disease:",
             "points" : [
                 "Plant only diseasefree, certified seed.",
                 "Follow a complete and regular foliar fungicide spray program.",
@@ -23,7 +23,6 @@
                 "Plow underall plant debris and volunteer potatoes after harvest.", 
                 "Avoid replanting potatoes (and tomatoes or eggplants) in the affected fields for at least 2 years if severe outbreaks have been experienced.",
                 "Although no cultivar is immune to EB, several cultivars are moderately resistant and should be planted if blight is a continuing problem."
-
             ]
         }
     },
@@ -66,11 +65,8 @@
             "desc_1" : "There are typically no specific symptoms for healthy potato leaves. Rather, healthy potato leaves are characterized by the absence of symptoms that would indicate disease or stress. Here are some general characteristics of healthy potato leaves:",
             "points" : [
                 "Color: Healthy potato leaves are typically a vibrant green color. The color should be consistent across the entire leaf surface.",
-
                 "Texture: Healthy potato leaves should have a smooth, even texture. The surface of the leaf should not be rough, bumpy, or have any signs of damage.",
-
                 "Shape and size: Healthy potato leaves should be uniform in shape and size. The leaves should not be abnormally small or misshapen.",
-
                 "Sturdiness: Healthy potato leaves should be sturdy and able to support the weight of the plant's foliage. The leaves should not be drooping or wilting, which can be a sign of overwatering, underwatering, or disease."
             ],
             "desc_2":"Overall, healthy potato leaves are an important part of a healthy potato plant. They provide the plant with the energy it needs to grow and produce tubers, and they can help to indicate when there may be issues with the plant's health or growing conditions."
@@ -79,13 +75,9 @@
             "desc" : "Managing healthy potato leaves involves maintaining optimal growing conditions and taking preventative measures to avoid potential disease and pest issues. Here are some key management practices for maintaining healthy potato leaves:",
             "points" : [
                 "Proper watering: Water the potato plants consistently, making sure not to overwater or underwater. Keep the soil moist, but not waterlogged. Overwatering can lead to root rot and fungal diseases, while underwatering can cause the leaves to wilt and stress the plant.",
-
                 "Fertilization: Apply appropriate fertilizers to ensure that the potato plants receive the necessary nutrients for optimal growth and development. Nitrogen, phosphorus, and potassium are important macronutrients that potato plants require in large quantities.",
-
                 "Pest management: Monitor potato plants regularly for signs of insect pests, such as aphids, flea beetles, and potato beetles. Use appropriate methods, such as insecticidal sprays or row covers, to control these pests if necessary.",
-
                 "Disease management: Potato plants can be susceptible to a variety of diseases, including late blight, early blight, and blackleg. To prevent these diseases, practice crop rotation, remove diseased plant material, and use appropriate fungicides when necessary.",
-
                 "Soil management: Maintain healthy soil by adding organic matter, such as compost or well-rotted manure, to improve soil structure and fertility. Test the soil regularly to ensure that the pH is within the optimal range for potato growth (between 5.0 and 6.0)."
             ]
         }
