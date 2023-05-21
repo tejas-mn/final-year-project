@@ -1,24 +1,19 @@
-from flask import Flask, render_template, request,jsonify
-from flask_cors import CORS,cross_origin
+from flask import render_template, request,jsonify,Blueprint
 from werkzeug.utils import secure_filename
+
 from utils import *
 from delete import *
 import json
 import os
 
-app = Flask(__name__)
-cors = CORS(app)
-# app.config['CORS_HEADERS'] = 'Content-Type'
-# app.config['X-Content-Type-Options'] = ''
+main = Blueprint("main", __name__)
 
 ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','JPG', 'JPEG', 'PNG'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
-
-@app.route('/predict', methods=['POST'])
-# @cross_origin()
+@main.route('/predict', methods=['POST'])
 def predict():
     file = request.files['file']
     filename = file.filename
@@ -35,7 +30,7 @@ def predict():
         context = prediction(file_path)
 
         js = {}
-        with open('fungicides.json', 'r') as f:
+        with open('./assets/fungicides.json', 'r') as f:
             js = json.load(f)
         fungicides = []
         for fun in js['fungicides']:
@@ -56,9 +51,8 @@ def predict():
             q="potato+healthy+leaf&tbm=isch"
 
         ds = {}
-        with open('disease.json', 'r') as f:
+        with open('./assets/disease.json', 'r') as f:
             ds = json.load(f)
-        # print(ds)
 
         data = {}
 
@@ -92,10 +86,9 @@ def predict():
     else:
         return {"error" : "Invalid Image"}
 
-@app.route("/")
+@main.route("/")
 def index():
     return render_template('home.html', title="Home")
 
-if __name__ == "__main__":
-    scheduleDelete('static', 2) #delete every 1 min
-    app.run()
+
+

@@ -6,9 +6,10 @@ from tensorflow.keras.preprocessing import image
 # from lite import predictLite
 
 # loading models
-MODEL_PATH = './jupyter/Best_CNN_march_30_epoch.h5'
-LITE_MODEL_PATH = 'cnn.tflite'
-LABEL_PATH = 'labels.txt'
+MODEL_PATH = './assets/Best_CNN_march_30_epoch.h5'
+LITE_MODEL_PATH = './assets/cnn.tflite'
+LABEL_PATH = './assets/labels.txt'
+
 model = tf.keras.models.load_model(MODEL_PATH)
 class_names = ['Potato_Early_blight', 'Potato_Late_blight', 'Potato_healthy']
 
