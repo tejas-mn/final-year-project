@@ -38,7 +38,7 @@
                                         <img class="img-fluid rounded mx-auto d-block" id="img-preview" src="" alt="" style="width: 200px; height: 200px; display: none !important;" />
                                         <form  method="post" action="/predict" enctype="multipart/form-data">
                                                 <!-- <label for="file" class="form-label" style="color: black;">Upload Your Images Here: </label> -->
-                                                <input class="form-control mt-2" type="file" name="file" accept=".jpg, .png, .jpeg, image/jpeg, image/png" id="files" onchange="displayImage(event)" required>
+                                                <input class="form-control mt-2" type="file" name="file" accept=".jpg, .png, .jpeg, image/jpeg, image/png" id="files"  onchange="displayImage(event)"  required>
                                                 <p id="size"></p>
                                                 <hr style="color: black;">
                                                 <button  type="submit" class="mt-0 btn btn-secondary" style="float: right;">Predict</button>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col pt-4"> 
                             <h2>Features</h2>
-                            <p>Project uses Deep Learning Algorithms to predict the diseases in your crops. It implements various deep learning libraries to build Robust and Efficient Neural Network which can provide you Fast and Accurate Results.</p>
+                            <p>The project employs Deep Learning Algorithms to forecast crop diseases. It utilizes diverse deep learning libraries to construct a resilient and efficient neural network, enabling rapid and precise outcomes.</p>
                             <ul>
                                 <li>Mobile Responsive Website</li>
                                 <li>Capture images in real time with camera on Mobile Devices</li>

@@ -110,6 +110,7 @@ var validate_and_preview = function() {
         var fsize_mb = fsize / (1024 * 1024); // file size in MB
         total_size += fsize_mb
     }
+
     // Show alert message for file size greater than 50 MB
     if (total_size >= 50) {
         document.getElementById('alert').setAttribute('style', 'padding-top: 64px;');
@@ -130,6 +131,7 @@ var validate_and_preview = function() {
             break;
         }
     }
+    
     // Show the alert message for file type other than PNG/JPEG/JPG
     if (flag > 0) {
         document.getElementById('alert').setAttribute('style', 'padding-top: 64px;');

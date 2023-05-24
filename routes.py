@@ -25,7 +25,13 @@ def predict():
     if file and allowed_file(filename):
         
         file_path = os.path.join('static/', secure_filename(filename))
+        
         file.save(file_path)
+        print(file_path)
+
+        image = cv2.imread(file_path)
+        image = cv2.resize(image , (300,300))
+        print(cv2.imwrite(file_path , image))
 
         context = prediction(file_path)
 
