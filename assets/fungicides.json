@@ -138,5 +138,19 @@
             "dec" : ""
             
         },
+         {
+            "id": "11",
+            "name": "Captan 50% WP",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "1250 gm",
+            "a.i. (g)" : "750-1000",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "1.5 tbs. to 4 tbs. per gallon",
+            "Waiting period from last application to harvest (days)" : "",
+            "link" : "https://www.solutionsstores.com/captan-50-wp-fungicide",
+            "img" : "https://smhttp-ssl-60515.nexcesscdn.net/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/c/a/captan-50-wp-fungicide_3.jpg",
+            "dec" : ""
+            
+        },
     ]
 }
