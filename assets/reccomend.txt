@@ -1,20 +1,3 @@
-Aureofungin 46.15% W.V. SP
-https://www.kisanestore.com/index.php?route=product/enquiry&product_id=3128
-
-Disease: Early blight
-Dosage per ha: 
-a.i. (g) :
-Formulation
-(g/ml)/% :0.005%
-Dilution in 
-water (L) :750
-
-Waiting 
-period 
-from last 
-application 
-to harvest (days) :30
-
 
 ---------------
 Captan 50% WG
@@ -22,12 +5,7 @@ Potato Early blight &
 Late blight 
 750 gm 1500 gm 500 21
 -----------------
-Captan 50% WP
-https://www.solutionsstores.com/captan-50-wp-fungicide
 
-Early blight 1250 gm 2.5 kg 750-1000 
-- 
-Late blight 1250 gm 2.5 kg 750-1000 -
 --------------------
 Captan 75% WP
 Early blight 1250 gm 1667 gm 1000 8 
@@ -50,14 +28,8 @@ Late Blight 1.25 2.5 750-1000 -
 Copper Sulphate 2.62 % SC
 Potato Early blight - 1.0 L 500 3 days 
 Late blight - 1.0 L 500
-
 ----------------------------
-Hexaconazole 2% SC
-https://inputs.kalgudi.com/p/c/SAMARTH---Hexaconazole-2--SC/3dec_3dem
 
-Potato Early blight & 
-Late blight 
-60 gm 3.0 L 500 21
 ----------------------------
 Kitazin 48% EC
 Potato Early blight 0.10% 
@@ -225,13 +197,6 @@ or 0.18%
 1000 lt. Not less 
 than 7 
 weeks
-----------------------------
-Metiram 55% + Pyraclostrobin 5% WG
-
-https://agroshopy.com/index.php?route=product/product&product_id=528
-
-Potato Late blight 900-1050 1500-1750 500 15
-
 
 
 
@@ -300,5 +265,43 @@ kg seed)
 used as 
 seed 
 treatment
+--------------
+Metiram 55% + Pyraclostrobin 5% WG
 
+https://agroshopy.com/index.php?route=product/product&product_id=528
+
+Potato Late blight 900-1050 1500-1750 500 15
+---------------
+Aureofungin 46.15% W.V. SP
+https://www.kisanestore.com/index.php?route=product/enquiry&product_id=3128
+
+Disease: Early blight
+Dosage per ha: 
+a.i. (g) :
+Formulation
+(g/ml)/% :0.005%
+Dilution in 
+water (L) :750
+
+Waiting 
+period 
+from last 
+application 
+to harvest (days) :30
+
+------------
+Captan 50% WP
+https://www.solutionsstores.com/captan-50-wp-fungicide
+
+Early blight 1250 gm 2.5 kg 750-1000 
+- 
+Late blight 1250 gm 2.5 kg 750-1000 -
+-------------
+
+Hexaconazole 2% SC
+https://inputs.kalgudi.com/p/c/SAMARTH---Hexaconazole-2--SC/3dec_3dem
+
+Potato Early blight & 
+Late blight 
+60 gm 3.0 L 500 21
 ========================================
