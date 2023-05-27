@@ -152,5 +152,19 @@
             "dec" : ""
             
         },
+         {
+            "id": "12",
+            "name": "Hexaconazole 2% SC",
+            "disease" : "Potato_Late_blight",
+            "Dosage per ha" : "1250 gm",
+            "a.i. (g)" : "60 Gm",
+            "Formulation (g/ml)/%" : "3.0 L",
+            "Dilution in water (L)" : "500",
+            "Waiting period from last application to harvest (days)" : "21",
+            "link" : "https://www.napanta.com/pesticide-products/hexaconazole-2-sc/rallis-samarth/",
+            "img" : "https://cdn.shopify.com/s/files/1/0557/7064/4689/products/500511__SAMARTH_-_100_ML-removebg-preview_2048x2048.png",
+            "dec" : ""
+            
+        },
     ]
 }
