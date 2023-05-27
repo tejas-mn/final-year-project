@@ -206,5 +206,18 @@
             "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/3_35_800x.webp",
             "dec" : ""
         },
+         {
+            "id": "16",
+            "name": "Metalaxyl 8% + Mancozeb 64% WP",
+            "disease" : "Potato_Late_blight",
+            "Dosage per acre" : "",
+            "a.i. (g)" : "",
+            "Formulation (g/ml)/%" : "2 gm/lit of water",
+            "Dilution in water (L)" : "",
+            "Waiting period from last application to harvest (days)" : "Not less than 7 weeks",
+            "link" : "https://agribegri.com/products/wisbhu.php",
+            "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/3_35_800x.webp",
+            "dec" : ""
+        },
     ]
 }
