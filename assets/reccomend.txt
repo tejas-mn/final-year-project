@@ -14,23 +14,7 @@ period
 from last 
 application 
 to harvest (days) :30
-------------------------------------------------
 
-Azoxystrobin 23% SC
-https://www.amazon.in/Katyayani-AZOXYSTROBIN-Systemic-Fungicide-Powerful/dp/B09J8Y5FNX
-
-Disease: Late blight
-Dosage per ha:  125 gm 500 ml 500 12
-a.i. (g) :
-Formulation
-(g/ml)/% :
-Dilution in 
-water (L) :
-Waiting 
-period 
-from last 
-application 
-to harvest (days) :
 
 ---------------
 Captan 50% WG
@@ -66,12 +50,7 @@ Late Blight 1.25 2.5 750-1000 -
 Copper Sulphate 2.62 % SC
 Potato Early blight - 1.0 L 500 3 days 
 Late blight - 1.0 L 500
-----------------------------
-Dimethomorph 50% WP
-Potato Late blight 
-(Phytophthora 
-infestans) 
-500 gm 1000 gm 750 L 16
+
 ----------------------------
 Hexaconazole 2% SC
 https://inputs.kalgudi.com/p/c/SAMARTH---Hexaconazole-2--SC/3dec_3dem
@@ -124,10 +103,6 @@ Potato Late Blight 750 gm 1000 gm 500 Lit 3-5
 ----------------------------
 Mancozeb 75% WP
 https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb
-Potato Late blight 1.125-1.5 
-kg 
-1.5-2 kg 750 Lt - 
-
 Early 
 blight 
 1.125-1.5 
@@ -198,32 +173,8 @@ Dilution | Waiting
 period
 ------------------
 
-Captan 70% + Hexaconazole 5% WP
-https://farmmate.in/products/firestone-captan-70-hexaconazole-5-wp-fungicide?variant=40641676345515&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic
-
-Potato Early blight 
-& Late blight 
-
-https://www.badikheti.com/fungicide/pdp/goldpower-captan-70-hexaconazole-5-wp-fungicides/tz48k6s5
-
-375-750 
-gm 
-500-1000 gm 500 lt. 21 days
 ------------------
-Carbendazim 25%+ Mancozeb 50% WS
 
-https://kisancenter.in/product/23168981/UPL-STARTUP-SAAF-Fungicide---Carbendazim-12----Mancozeb-63--WS-?utm_source=GMC&gclid=Cj0KCQjwt_qgBhDFARIsABcDjOdC5qNovQNL-NhpPTSmSR7uMEIugPeK7H54l9i-uKe-W2Eaanx16XYaAmXpEALw_wcB
-
-Potato Late blight 
-Black scurf 
-(1.5 + 3.0) 
-To (1.75 + 
-3.5) (for 10 
-kg seed) 
-6 - 7 2 This is 
-used as 
-seed 
-treatment
 ---------------------
 Cymoxanil 8% + Mancozeb 64% WP
 https://www.amazon.in/Curzate-Cymoxanil-Mancozeb-Fungicide-Solution/dp/B08S79KJWH
@@ -280,3 +231,74 @@ Metiram 55% + Pyraclostrobin 5% WG
 https://agroshopy.com/index.php?route=product/product&product_id=528
 
 Potato Late blight 900-1050 1500-1750 500 15
+
+
+
+
+
+===================Added=================
+
+Azoxystrobin 23% SC
+https://www.amazon.in/Katyayani-AZOXYSTROBIN-Systemic-Fungicide-Powerful/dp/B09J8Y5FNX
+
+Disease: Late blight
+Dosage per ha:  125 gm 500 ml 500 12
+a.i. (g) :
+Formulation
+(g/ml)/% :
+Dilution in 
+water (L) :
+Waiting 
+period 
+from last 
+application 
+to harvest (days) :
+
+---------
+
+Dimethomorph 50% WP
+Potato Late blight 
+(Phytophthora 
+infestans) 
+500 gm 1000 gm 750 L 16
+
+-----------
+
+Mancozeb 75% WP
+https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb
+Potato Late blight 1.125-1.5 
+kg 
+1.5-2 kg 750 Lt - 
+
+-----------
+
+Captan 70% + Hexaconazole 5% WP
+https://farmmate.in/products/firestone-captan-70-hexaconazole-5-wp-fungicide?variant=40641676345515&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic
+
+Potato Early blight 
+& Late blight 
+
+https://www.badikheti.com/fungicide/pdp/goldpower-captan-70-hexaconazole-5-wp-fungicides/tz48k6s5
+
+375-750 
+gm 
+500-1000 gm 500 lt. 21 days
+
+-----------
+
+Carbendazim 25%+ Mancozeb 50% WS
+
+https://kisancenter.in/product/23168981/UPL-STARTUP-SAAF-Fungicide---Carbendazim-12----Mancozeb-63--WS-?utm_source=GMC&gclid=Cj0KCQjwt_qgBhDFARIsABcDjOdC5qNovQNL-NhpPTSmSR7uMEIugPeK7H54l9i-uKe-W2Eaanx16XYaAmXpEALw_wcB
+
+Potato Late blight 
+Black scurf 
+(1.5 + 3.0) 
+To (1.75 + 
+3.5) (for 10 
+kg seed) 
+6 - 7 2 This is 
+used as 
+seed 
+treatment
+
+========================================
