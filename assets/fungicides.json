@@ -167,7 +167,7 @@
             
         },
          {
-            "id": "12",
+            "id": "13",
             "name": "Hexaconazole 2% SC",
             "disease" : "Potato_Early_blight",
             "Dosage per ha" : "",
@@ -179,6 +179,32 @@
             "img" : "https://cdn.shopify.com/s/files/1/0557/7064/4689/products/500511__SAMARTH_-_100_ML-removebg-preview_2048x2048.png",
             "dec" : ""
             
+        },
+        {
+            "id": "14",
+            "name": "Chlorothalonil 75% WP",
+            "disease" : "Potato_Early_blight",
+            "Dosage per acre" : "300 gm",
+            "a.i. (g)" : "300 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "200L/acre",
+            "Waiting period from last application to harvest (days)" : "14 days",
+            "link" : "https://www.bighaat.com/products/kavach-fungicide?variant=40521433022487&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=Google&utm_medium=CPC&utm_campaign=17706716593&utm_adgroup=&utm_term=&creative=&device=m&devicemodel=&matchtype=&feeditemid=&targetid=&network=x&placement=&adposition=&GA_loc_interest_ms=&GA_loc_physical_ms=1007768&gclid=Cj0KCQjwt_qgBhDFARIsABcDjOfxtvmF6kGE64gim8ZicRxnQzQGbRJFdV_KtnvRYKJc8LGe1pC7ljsaAn1lEALw_wcB",
+            "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/3_35_800x.webp",
+            "dec" : ""
+        },
+           {
+            "id": "15",
+            "name": "Chlorothalonil 75% WP",
+            "disease" : "Potato_Late_blight",
+            "Dosage per acre" : "300 gm",
+            "a.i. (g)" : "300 gm",
+            "Formulation (g/ml)/%" : "",
+            "Dilution in water (L)" : "200L/acre",
+            "Waiting period from last application to harvest (days)" : "14 days",
+            "link" : "https://www.bighaat.com/products/kavach-fungicide?variant=40521433022487&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=Google&utm_medium=CPC&utm_campaign=17706716593&utm_adgroup=&utm_term=&creative=&device=m&devicemodel=&matchtype=&feeditemid=&targetid=&network=x&placement=&adposition=&GA_loc_interest_ms=&GA_loc_physical_ms=1007768&gclid=Cj0KCQjwt_qgBhDFARIsABcDjOfxtvmF6kGE64gim8ZicRxnQzQGbRJFdV_KtnvRYKJc8LGe1pC7ljsaAn1lEALw_wcB",
+            "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/3_35_800x.webp",
+            "dec" : ""
         },
     ]
 }
