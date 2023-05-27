@@ -122,7 +122,6 @@ def prediction(img_path):
         context = {
             "disease" : predicted_class,
             "confidence" : confidence,
-            "remedy": "Plant potato tubers with less water",
             "img_path" : "../" + img_path,
             "mask_img" : "../" + mask_img,
             "diseased_img" : "../" + diseased_img,
@@ -132,7 +131,6 @@ def prediction(img_path):
         context = {
             "disease" : predicted_class,
             "confidence" : confidence,
-            "remedy": "Plant potato tubers with more water",
             "img_path" : "../" + img_path,
             "mask_img" : "../" + mask_img,
             "diseased_img" : "../" + diseased_img,
@@ -142,7 +140,6 @@ def prediction(img_path):
         context = {
             "disease" : predicted_class,
             "confidence" : confidence,
-            "remedy": "NA",
             "img_path" : "../" +  img_path,
             "mask_img" : "../" + mask_img,
             "diseased_img" : "../" + diseased_img,

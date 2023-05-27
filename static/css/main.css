@@ -74,9 +74,7 @@ main > .container {
     transform: scale(1.05);
     transition: transform .5s;;
 }
-p{
-    /* text-align: justify; */
-}
+
 /* 
 .col{
     transition: transform .5s;;
@@ -179,4 +177,13 @@ to {
 
   .rssapp-list {
     max-width: 95% !important;
+  }
+
+  .card{
+    transition: 0.5s;
+  }
+
+  .card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
   }
