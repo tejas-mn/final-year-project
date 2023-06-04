@@ -37,7 +37,6 @@
                                     <div class="modal-body">
                                         <img class="img-fluid rounded mx-auto d-block" id="img-preview" src="" alt="" style="width: 200px; height: 200px; display: none !important;" />
                                         <form  method="post" action="/predict" enctype="multipart/form-data">
-                                                <!-- <label for="file" class="form-label" style="color: black;">Upload Your Images Here: </label> -->
                                                 <input class="form-control mt-2" type="file" name="file" accept=".jpg, .png, .jpeg, image/jpeg, image/png" id="files"  onchange="displayImage(event)"  required>
                                                 <p id="size"></p>
                                                 <hr style="color: black;">
@@ -53,7 +52,6 @@
                         
                     </div>
                 </div>
-                <!-- <div id="image_preview" class="row mt-3 justify-content-center"></div> -->
             </div>
 
 
@@ -61,7 +59,7 @@
                 <div class="container px-4 px-md-3 pt-5">
                     <div class="row align-items-lg-center align-items-md-center">
                         <div class="col-9 mx-auto col-md-6 col-lg-5">
-                            <img src="{{ url_for('static', filename='/assets/pngegg.png') }}" class="img-fluid" alt="Features" width="400" height="400">
+                            <img src="https://www.proweb247.com/images/salientfeatures/logo-design.png" class="img-fluid" alt="Features" width="400" height="400">
                         </div>
                         <div class="col pt-4"> 
                             <h2>Features</h2>
@@ -95,12 +93,9 @@
                             <button class="nav-link crops-list-tab rounded" id="nav-bell-pepper-tab" data-bs-toggle="tab" data-bs-target="#nav-bell-pepper" type="button" role="tab" aria-controls="nav-bell-pepper" aria-selected="false">VGG-16</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-blueberry-tab" data-bs-toggle="tab" data-bs-target="#nav-blueberry" type="button" role="tab" aria-controls="nav-blueberry" aria-selected="false">VGG-19</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Inception V3</button>
-                            
-                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Resnet50</button>
-                            
-                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Resnet15v2</button>
-                            
-                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Xception</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-resnet50-tab" data-bs-toggle="tab" data-bs-target="#nav-resnet50" type="button" role="tab" aria-controls="nav-resnet50" aria-selected="false">Resnet50</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-resnet15-tab" data-bs-toggle="tab" data-bs-target="#nav-resnet15" type="button" role="tab" aria-controls="nav-resnet15" aria-selected="false">Resnet15v2</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-xception-tab" data-bs-toggle="tab" data-bs-target="#nav-xception" type="button" role="tab" aria-controls="nav-xception" aria-selected="false">Xception</button>
                         </div>
                     </nav>
                 
@@ -123,10 +118,10 @@
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-mtrx.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/vgg16-graph.png') }}" alt="" width="400" height="400">
                                     </div>
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-graph.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/vgg16-mtrx.png') }}" alt="" width="400" height="400">
                                     </div>
                                     
                                 </div>
@@ -137,10 +132,12 @@
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-mtrx.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/vgg19-mtrx.png') }}" alt="" width="400" height="400">
                                     </div>
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-graph.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/vgg19-graph1.png') }}" alt="" width="400" height="400">
+
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/vgg19-graph2.png') }}" alt="" width="400" height="400">
                                     </div>
                                     
                                 </div>
@@ -151,15 +148,54 @@
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-mtrx.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/inceptionv3-mtrx.png') }}" alt="" width="400" height="400">
                                     </div>
                                     <div class="col-6 ">
-                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-graph.png') }}" alt="" width="400" height="400">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/inceptionv3-graph.png') }}" alt="" width="400" height="400">
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
+                        <div class="tab-pane fade" id="nav-resnet50" role="tabpanel" aria-labelledby="nav-resnet50-tab">
+                            <div class="container-fluid ">
+                                <div class="row" style="justify-content: center; align-items: center;">
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/resnet50-mtrx.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/resnet50-graph.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-resnet15" role="tabpanel" aria-labelledby="nav-resnet15-tab">
+                            <div class="container-fluid ">
+                                <div class="row" style="justify-content: center; align-items: center;">
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/resnet15-mtrx.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/resnet15-graph.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-xception" role="tabpanel" aria-labelledby="nav-xception-tab">
+                            <div class="container-fluid ">
+                                <div class="row" style="justify-content: center; align-items: center;">
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/xception-mtrx.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                    <div class="col-6 ">
+                                        <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/xception-graph.png') }}" alt="" width="400" height="400">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                 </div>
                 </div>
             
@@ -167,7 +203,7 @@
             <div id="privacy">
                 <div class="container px-4 px-md-3 pt-5">
                     <div class="row align-items-lg-center align-items-md-center">
-                        <div class="col mx-auto col-md-6 order-md-1 col-lg-5">
+                        <div class="col-9 mx-auto col-md-6 order-md-1 col-lg-5">
                             <img src="{{ url_for('static', filename='assets/arch.jpg') }}" alt="Privacy" class="img-fluid" >
                         </div>
                         <div class="col pt-4"> 
