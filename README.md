@@ -21,11 +21,8 @@ model :
  include more images and train the model
  try including healthy potato and potato scab
 
-paper :
- 
+
 others :
  report
  ppt
- technical seminar
- activity points
  
