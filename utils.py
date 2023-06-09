@@ -6,7 +6,8 @@ from tensorflow.keras.preprocessing import image
 # from lite import predictLite
 
 # loading models
-MODEL_PATH = './assets/Retrained_30_Epoch_Best.h5'
+# MODEL_PATH = './assets/Retrained_30_Epoch_Best.h5'
+MODEL_PATH = './assets/Best_CNN_march_30_epoch.h5'
 LITE_MODEL_PATH = './assets/cnn.tflite'
 LABEL_PATH = './assets/labels.txt'
 
