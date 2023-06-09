@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing import image
 # from lite import predictLite
 
 # loading models
-MODEL_PATH = './assets/Best_CNN_march_30_epoch.h5'
+MODEL_PATH = './assets/Retrained_30_Epoch_Best.h5'
 LITE_MODEL_PATH = './assets/cnn.tflite'
 LABEL_PATH = './assets/labels.txt'
 
@@ -143,6 +143,6 @@ def prediction(img_path):
             "img_path" : "../" +  img_path,
             "mask_img" : "../" + mask_img,
             "diseased_img" : "../" + diseased_img,
-            "perc_disease" : perc_disease
+            "perc_disease" : "0.00%"
         }
     return context

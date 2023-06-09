@@ -2,10 +2,8 @@
 {%block result%}
 
         <main class="flex-shrink-0">
-
             <div class="mt-5 mb-5 container px-4 px-md-3">
                 <div class="row image-holder align-items-lg-center align-items-md-center mt-4">
-                    
                     <div class="col rounded mx-auto col-md-4 order-md-6 col-lg-4">
                         <img src="{{data['mask_img']}}" id="crop-img" alt="Project Logo" height="300" width="300" class="img-fluid">
                     </div>
@@ -15,7 +13,6 @@
                     <div class="col mx-auto col-md-4 order-md-6 col-lg-4">
                         <img src="{{data['diseased_img']}}" id="crop-img" alt="Project Logo" height="300" width="300" class="img-fluid">
                     </div>
-                   
                 </div>
 
                 <div class="row mt-2">
@@ -25,7 +22,6 @@
                         <h5 class="text-center">Percentage of Area Infected : {{data['perc_disease']}}</h5>
                     </div>
                 </div>
-
             </div>
 
                 <div class="mt-5 container  rounded" style="padding-top: 12px !important; padding-bottom: 12px;">
@@ -36,7 +32,7 @@
                             <button class="nav-link crops-list-tab rounded" id="nav-bell-pepper-tab" data-bs-toggle="tab" data-bs-target="#nav-bell-pepper" type="button" role="tab" aria-controls="nav-bell-pepper" aria-selected="false">Symptoms</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-blueberry-tab" data-bs-toggle="tab" data-bs-target="#nav-blueberry" type="button" role="tab" aria-controls="nav-blueberry" aria-selected="false">Management and Control</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Recommended Fungicides</button>
-                            <button class="nav-link crops-list-tab rounded" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news-tab" aria-selected="false">News</button>
+                            <button class="nav-link crops-list-tab rounded" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news-tab" aria-selected="false">Articles</button>
                         </div>
                     </nav>
                     <div class="tab-content custom-bg-color-2 rounded" style="padding-bottom: 17px; padding-top: 17px;" id="nav-tabContent">
@@ -77,11 +73,11 @@
                         <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
                             
                             {% if data['disease'] == 'Potato_Early_blight' %}
-                                <iframe src="https://rss.app/embed/v1/list/tyiGnv1W54OlmBnw" frameborder="0"></iframe>
+                            <iframe src="https://rss.app/embed/v1/list/t6agbjtQvAbjpYYj" frameborder="0"></iframe>
                             {% elif data['disease'] == 'Potato_Late_blight' %}
-                                <iframe  src="https://rss.app/embed/v1/list/tj7lMcvVYPAjuVPF" frameborder="0"></iframe>
+                            <iframe src="https://rss.app/embed/v1/list/tGzz9zxuiApKcdv7" frameborder="0"></iframe>
                             {% else %}
-                                <iframe name="iframe1" id="iframe1" src="https://rss.app/embed/v1/list/RCzYk9dKQi2J0oAU" frameborder="0"></iframe>
+                            <iframe src="https://rss.app/embed/v1/list/tmA1nawGjBwuOEoA" frameborder="0"></iframe>
                             {%endif%}
 
                         </div>
@@ -117,9 +113,16 @@
                                                 <p class="mb-0 text-uppercase text-center role text-dark fw-bold"><a href="{{f['link']}}" target="_blank">{{f['name']}}</a></p>
                                                 <hr style="color: black;"/>
                                                 <img class="img-fluid rounded mx-auto d-block" src="{{f['img']}}" alt="" width="120" height="120">
-                                                <p class="mb-0 text-center role text-dark">Dosage per ha : {{f['Dosage per ha']}} </p>
-                                                <p class="mb-0 text-center role text-dark">Dilution in water (L) : {{f['Dilution in water (L)']}}</p>
-                                                <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : {{f['Waiting period from last application to harvest (days)']}}</p>
+
+                                                {%if f['Dosage per ha'] != "" %}
+                                                    <p class="mb-0 text-center role text-dark">Dosage per ha : {{f['Dosage per ha']}} </p>
+                                                {%endif%}
+                                                {%if f['Dilution in water (L)'] != "" %}
+                                                    <p class="mb-0 text-center role text-dark">Dilution in water (L) : {{f['Dilution in water (L)']}}</p>
+                                                {%endif%}
+                                                {%if f['Waiting period from last application to harvest (days)'] != "" %}
+                                                    <p class="mb-0 text-center role text-dark">Waiting period from last application to harvest (days) : {{f['Waiting period from last application to harvest (days)']}}</p>
+                                                {%endif%}
                                             </div>
                                         </div>
                                     </div>

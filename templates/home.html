@@ -1,9 +1,6 @@
 {%extends "base.html" %}
-
 {%block home%}
-
         <main class="flex-shrink-0">
-
             <div class="container px-4 px-md-3" style="margin-top: 4rem !important;">
                 <div class="row align-items-lg-center align-items-md-center mt-4">
                     <div class="col-9 mx-auto col-md-6 order-md-4 col-lg-5">
@@ -20,12 +17,10 @@
                                 </div>
                             </div>
                         </form>
-
                         <div>
                             <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 Predict Now
                             </button>
-                            
                             <!-- Modal -->
                             <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog  modal-dialog-centered">
@@ -54,7 +49,6 @@
                 </div>
             </div>
 
-
             <div id="features">
                 <div class="container px-4 px-md-3 pt-5">
                     <div class="row align-items-lg-center align-items-md-center">
@@ -79,20 +73,19 @@
                 </div>
             </div>
 
-
-                <br>
-                <div class="container" id="crops-list">
-                    <h1 class="text-center">Algorithms Used</h1>
-                </div>
-                <br>
+            <br>
+            <div class="container" id="crops-list">
+                <h1 class="text-center">Algorithms Used</h1>
+            </div>
+            <br>
 
                 <div class="container custom-bg-color rounded" style="padding-top: 12px; padding-bottom: 12px;">
                     <nav>
                         <div class="nav nav-tabs crops-list-tab" style="border: none; padding-bottom: 12px;" id="nav-tab" role="tablist">
-                            <button class="nav-link crops-list-tab active rounded" id="nav-apple-tab" data-bs-toggle="tab" data-bs-target="#nav-apple" type="button" role="tab" aria-controls="nav-apple" aria-selected="true">CNN</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-bell-pepper-tab" data-bs-toggle="tab" data-bs-target="#nav-bell-pepper" type="button" role="tab" aria-controls="nav-bell-pepper" aria-selected="false">VGG-16</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-blueberry-tab" data-bs-toggle="tab" data-bs-target="#nav-blueberry" type="button" role="tab" aria-controls="nav-blueberry" aria-selected="false">VGG-19</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Inception V3</button>
+                            <button class="nav-link crops-list-tab active rounded" id="nav-cnn-tab" data-bs-toggle="tab" data-bs-target="#nav-cnn" type="button" role="tab" aria-controls="nav-cnn" aria-selected="true">CNN</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-vgg16-tab" data-bs-toggle="tab" data-bs-target="#nav-vgg16" type="button" role="tab" aria-controls="nav-vgg16-pepper" aria-selected="false">VGG-16</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-vgg19-tab" data-bs-toggle="tab" data-bs-target="#nav-vgg19" type="button" role="tab" aria-controls="nav-vgg19" aria-selected="false">VGG-19</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-inception-tab" data-bs-toggle="tab" data-bs-target="#nav-inception" type="button" role="tab" aria-controls="nav-inception" aria-selected="false">Inception V3</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-resnet50-tab" data-bs-toggle="tab" data-bs-target="#nav-resnet50" type="button" role="tab" aria-controls="nav-resnet50" aria-selected="false">Resnet50</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-resnet15-tab" data-bs-toggle="tab" data-bs-target="#nav-resnet15" type="button" role="tab" aria-controls="nav-resnet15" aria-selected="false">Resnet15v2</button>
                             <button class="nav-link crops-list-tab rounded" id="nav-xception-tab" data-bs-toggle="tab" data-bs-target="#nav-xception" type="button" role="tab" aria-controls="nav-xception" aria-selected="false">Xception</button>
@@ -100,7 +93,7 @@
                     </nav>
                 
                     <div class="tab-content bg-light rounded" style="padding-bottom: 17px; padding-top: 17px;" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-apple" role="tabpanel" aria-labelledby="nav-apple-tab">
+                        <div class="tab-pane fade show active" id="nav-cnn" role="tabpanel" aria-labelledby="nav-cnn-tab">
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
@@ -108,13 +101,12 @@
                                     </div>
                                     <div class="col-6 ">
                                         <img class="img-fluid rounded mx-auto d-block" src="{{ url_for('static', filename='algos/cnn-graph.png') }}" alt="" width="400" height="400">
-                                    </div>
-                                    
+                                    </div>                  
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="nav-bell-pepper" role="tabpanel" aria-labelledby="nav-bell-pepper-tab">
+                        <div class="tab-pane fade" id="nav-vgg16" role="tabpanel" aria-labelledby="nav-vgg16-tab">
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
@@ -128,7 +120,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="nav-blueberry" role="tabpanel" aria-labelledby="nav-blueberry-tab">
+                        <div class="tab-pane fade" id="nav-vgg19" role="tabpanel" aria-labelledby="nav-vgg19-tab">
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
@@ -144,7 +136,7 @@
                             </div>
                         </div>
                         
-                        <div class="tab-pane fade" id="nav-cherry" role="tabpanel" aria-labelledby="nav-cherry-tab">
+                        <div class="tab-pane fade" id="nav-inception" role="tabpanel" aria-labelledby="nav-inception-tab">
                             <div class="container-fluid ">
                                 <div class="row" style="justify-content: center; align-items: center;">
                                     <div class="col-6 ">
@@ -195,7 +187,6 @@
                                 </div>
                             </div>
                         </div>
-
                 </div>
                 </div>
             
@@ -208,13 +199,13 @@
                         </div>
                         <div class="col pt-4"> 
                             <h2>System Architecture</h2>
-                            <p>Project respects your privacy. Your uploaded Images get deleted after an hour. It doesn't have any annoying ads so that you can predict Crops Diseases without any interruption.</p>
-                            <h4>Privacy-First Features:</h4>
+                            <p style="text-align: justify;">The System comprises of frontend built using bootstrap framework for fast development and its responsive features. Flask Web Framework is used for serving the tensorflow model in backend which takes the uploaded image as input and gives the response for the predicted disease. The CNN models are trained on dataset consisting around 3000 images collected from various datasets like PlantVillage, PLD, Mendely and also images from web.</p>
+                            <h4>Challenges Faced:</h4>
                             <ul>
-                                <li>No Data Collection</li>
-                                <li>No Cookies stored in your browser</li>
-                                <li>Automatic deletion of your Images</li>
-                                <li>No Ads</li>
+                                <li>Image compression implemented using Javascript at Client Side.</li>
+                                <li>Handling Image size for faster processing and reducing Time Complexity.</li>
+                                <li>Automatic deletion of images using threading to reduce server storage space.</li>
+                                <li>Need for various datasets for diverse image classification.</li>
                             </ul>
                         </div>
                     </div>
@@ -229,11 +220,13 @@
                         
                         <div class="slider">
                           <div class="logos">
-                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200">
-                            <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/241/797/png-transparent-cascading-style-sheets-css3-javascript-logo-world-wide-web-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
+                            <!-- <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="" width="200" height="200"> -->
+                            <img class="item img-fluid rounded mx-auto d" src="https://www.nicepng.com/png/detail/141-1415492_bootstrap-bootstrap-4-icon-png.png" alt="" width="200" height="200">
                             <img class="item img-fluid rounded mx-auto d" src="https://w1.pngwing.com/pngs/951/574/png-transparent-react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-thumbnail.png" alt="" width="200" height="200">
                             <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/447/294/png-transparent-python-javascript-logo-clojure-python-logo-blue-angle-text-thumbnail.png" alt="" width="200" height="200">
                             <img class="item img-fluid rounded mx-auto d" src="https://w7.pngwing.com/pngs/871/987/png-transparent-tensorflow-google-brain-machine-learning-deep-learning-google-angle-text-orange-thumbnail.png" alt="" width="200" height="200">    
+                            <img class="item img-fluid rounded mx-auto d" src="https://editor.analyticsvidhya.com/uploads/800882.png" alt="" width="200" height="200">    
+
                           </div>
                           
                             <!-- <div class="logos">

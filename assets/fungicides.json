@@ -9,7 +9,7 @@
             "a.i. (g)" : "",
             "Formulation (g/ml)/%" : "0.005%",
             "Dilution in water (L)" : "750",
-            "Waiting period from last application to harvest (days)" : "30",
+            "Waiting period from last application to harvest (days)" : "30 days",
             "link" : "https://www.kisanestore.com/index.php?route=product/enquiry&product_id=3128",
             "img" : "https://www.kisanestore.com/image/cache/data/Hindustan%20Antibiotics/Aureofingin_B(400)-500x554.png",
             "dec" : ""
@@ -24,7 +24,7 @@
             "a.i. (g)" : "125 gm",
             "Formulation (g/ml)/%" : "500 ml",
             "Dilution in water (L)" : "500 L",
-            "Waiting period from last application to harvest (days)" : "12",
+            "Waiting period from last application to harvest (days)" : "12 days",
             "link" : "https://www.amazon.in/Katyayani-AZOXYSTROBIN-Systemic-Fungicide-Powerful/dp/B09J8Y5FNX",
             "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71xA6n4laxL._SL1500_.jpg",
             "dec" : ""
@@ -38,7 +38,7 @@
             "a.i. (g)" : "1000 gm",
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "750 L",
-            "Waiting period from last application to harvest (days)" : "16",
+            "Waiting period from last application to harvest (days)" : "16 days",
             "link" : "https://www.bighaat.com/products/acrobat-fungicide",
             "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/8_800x.webp",
             "dec" : ""
@@ -53,8 +53,8 @@
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "750 Lt",
             "Waiting period from last application to harvest (days)" : "",
-            "link" : "https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb",
-            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/612m5O2dN3L._SL1000_.jpg",
+            "link" : "https://www.katyayaniorganics.com/product/k-zeb-mancozeb-75-wp-fungicide/",
+            "img" : "https://www.katyayaniorganics.com/wp-content/uploads/2022/06/KZEB-EDIT_resize.png",
             "dec" : ""
             
         },
@@ -67,8 +67,8 @@
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "750 Lt",
             "Waiting period from last application to harvest (days)" : "",
-            "link" : "https://www.amazon.in/AD-45-Mancozeb-75-WP-Fungicide/dp/B07JDSJY6C#:~:text=Mancozeb",
-            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/612m5O2dN3L._SL1000_.jpg",
+            "link" : "https://www.katyayaniorganics.com/product/k-zeb-mancozeb-75-wp-fungicide/",
+            "img" : "https://www.katyayaniorganics.com/wp-content/uploads/2022/06/KZEB-EDIT_resize.png",
             "dec" : ""
             
         },
@@ -160,7 +160,7 @@
             "a.i. (g)" : "60 Gm",
             "Formulation (g/ml)/%" : "3.0 L",
             "Dilution in water (L)" : "500",
-            "Waiting period from last application to harvest (days)" : "21",
+            "Waiting period from last application to harvest (days)" : "21 days",
             "link" : "https://www.napanta.com/pesticide-products/hexaconazole-2-sc/rallis-samarth/",
             "img" : "https://cdn.shopify.com/s/files/1/0557/7064/4689/products/500511__SAMARTH_-_100_ML-removebg-preview_2048x2048.png",
             "dec" : ""
@@ -174,7 +174,7 @@
             "a.i. (g)" : "60 Gm",
             "Formulation (g/ml)/%" : "3.0 L",
             "Dilution in water (L)" : "500",
-            "Waiting period from last application to harvest (days)" : "21",
+            "Waiting period from last application to harvest (days)" : "21 days",
             "link" : "https://www.napanta.com/pesticide-products/hexaconazole-2-sc/rallis-samarth/",
             "img" : "https://cdn.shopify.com/s/files/1/0557/7064/4689/products/500511__SAMARTH_-_100_ML-removebg-preview_2048x2048.png",
             "dec" : ""
@@ -184,7 +184,7 @@
             "id": "14",
             "name": "Chlorothalonil 75% WP",
             "disease" : "Potato_Early_blight",
-            "Dosage per acre" : "300 gm",
+            "Dosage per ha" : "300 gm",
             "a.i. (g)" : "300 gm",
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "200L/acre",
@@ -197,7 +197,7 @@
             "id": "15",
             "name": "Chlorothalonil 75% WP",
             "disease" : "Potato_Late_blight",
-            "Dosage per acre" : "300 gm",
+            "Dosage per ha" : "300 gm",
             "a.i. (g)" : "300 gm",
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "200L/acre",
@@ -210,7 +210,7 @@
             "id": "16",
             "name": "Metalaxyl 8% + Mancozeb 64% WP",
             "disease" : "Potato_Late_blight",
-            "Dosage per acre" : "",
+            "Dosage per ha" : "",
             "a.i. (g)" : "",
             "Formulation (g/ml)/%" : "2 gm/lit of water",
             "Dilution in water (L)" : "",

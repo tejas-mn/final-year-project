@@ -85,6 +85,7 @@ def predict(api=False):
             data['symptoms_para_2'] = ds['healthy']['symptoms']['desc_2']
             data['management_para_1'] = ds['healthy']['management']['desc']
             data['management'] = ds['healthy']['management']['points']
+            data['perc_disease'] = "0.00%"
 
         # return 'http://127.0.0.1:5002/' + str(context['diseased_img'])[3:]
 
@@ -92,6 +93,7 @@ def predict(api=False):
             data['context'] = context
             return jsonify(data)
         
+
         return render_template('results.html' , data = context,query=q , info=data, title="Results")
     else:
         return Response("{'message':'Please choose an image'}", status=601, mimetype='application/json')
