@@ -28,16 +28,16 @@
                     <h2 class="text-center text-uppercase">Results</h2>
                     <nav>
                         <div class="mt-4 nav nav-tabs crops-list-tab justify-content-center" style="border: none; padding-bottom: 12px; " id="nav-tab" role="tablist">
-                            <button class="nav-link crops-list-tab active rounded" id="nav-apple-tab" data-bs-toggle="tab" data-bs-target="#nav-apple" type="button" role="tab" aria-controls="nav-apple" aria-selected="true">About the Disease</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-bell-pepper-tab" data-bs-toggle="tab" data-bs-target="#nav-bell-pepper" type="button" role="tab" aria-controls="nav-bell-pepper" aria-selected="false">Symptoms</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-blueberry-tab" data-bs-toggle="tab" data-bs-target="#nav-blueberry" type="button" role="tab" aria-controls="nav-blueberry" aria-selected="false">Management and Control</button>
-                            <button class="nav-link crops-list-tab rounded" id="nav-cherry-tab" data-bs-toggle="tab" data-bs-target="#nav-cherry" type="button" role="tab" aria-controls="nav-cherry" aria-selected="false">Recommended Fungicides</button>
+                            <button class="nav-link crops-list-tab active rounded" id="nav-disease-tab" data-bs-toggle="tab" data-bs-target="#nav-disease" type="button" role="tab" aria-controls="nav-disease" aria-selected="true">About the Disease</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-symptoms-tab" data-bs-toggle="tab" data-bs-target="#nav-symptoms" type="button" role="tab" aria-controls="nav-symptoms" aria-selected="false">Symptoms</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-mgmt-tab" data-bs-toggle="tab" data-bs-target="#nav-mgmt" type="button" role="tab" aria-controls="nav-mgmt" aria-selected="false">Management and Control</button>
+                            <button class="nav-link crops-list-tab rounded" id="nav-fungi-tab" data-bs-toggle="tab" data-bs-target="#nav-fungi" type="button" role="tab" aria-controls="nav-fungi" aria-selected="false">Recommended Fungicides</button>
                             <button class="nav-link crops-list-tab rounded" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news-tab" aria-selected="false">Articles</button>
                         </div>
                     </nav>
                     <div class="tab-content custom-bg-color-2 rounded" style="padding-bottom: 17px; padding-top: 17px;" id="nav-tabContent">
                         
-                        <div class="tab-pane fade show active" id="nav-apple" role="tabpanel" aria-labelledby="nav-apple-tab">
+                        <div class="tab-pane fade show active" id="nav-disease" role="tabpanel" aria-labelledby="nav-disease-tab">
                          
 
                             <div class="container-fluid ">
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="nav-bell-pepper" role="tabpanel" aria-labelledby="nav-bell-pepper-tab">
+                        <div class="tab-pane fade" id="nav-symptoms" role="tabpanel" aria-labelledby="nav-symptoms-tab">
                             <ul>
                                 <p>
                                     {{info['symptoms_para_1']}}
@@ -73,16 +73,16 @@
                         <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
                             
                             {% if data['disease'] == 'Potato_Early_blight' %}
-                            <iframe src="https://rss.app/embed/v1/list/t6agbjtQvAbjpYYj" frameborder="0"></iframe>
+                                <iframe src="https://rss.app/embed/v1/list/t6agbjtQvAbjpYYj" frameborder="0"></iframe>
                             {% elif data['disease'] == 'Potato_Late_blight' %}
-                            <iframe src="https://rss.app/embed/v1/list/tGzz9zxuiApKcdv7" frameborder="0"></iframe>
+                                <iframe src="https://rss.app/embed/v1/list/tGzz9zxuiApKcdv7" frameborder="0"></iframe>
                             {% else %}
-                            <iframe src="https://rss.app/embed/v1/list/tmA1nawGjBwuOEoA" frameborder="0"></iframe>
+                                <iframe src="https://rss.app/embed/v1/list/tmA1nawGjBwuOEoA" frameborder="0"></iframe>
                             {%endif%}
 
                         </div>
 
-                        <div class="tab-pane fade" id="nav-blueberry" role="tabpanel" aria-labelledby="nav-blueberry-tab">
+                        <div class="tab-pane fade" id="nav-mgmt" role="tabpanel" aria-labelledby="nav-mgmt-tab">
                             <ul>
                                 <p>
                                     {{info['management_para_1']}}
@@ -95,7 +95,7 @@
                             </ul>
                         </div>
                         
-                        <div class="tab-pane fade" id="nav-cherry" role="tabpanel" aria-labelledby="nav-cherry-tab">
+                        <div class="tab-pane fade" id="nav-fungi" role="tabpanel" aria-labelledby="nav-fungi-tab">
 
                             <div class="container p-2">
                                 <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">

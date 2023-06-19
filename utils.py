@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import cv2
 import tensorflow as tf
@@ -7,7 +8,7 @@ from tensorflow.keras.preprocessing import image
 
 # loading models
 # MODEL_PATH = './assets/Retrained_30_Epoch_Best.h5'
-MODEL_PATH = './assets/Best_CNN_march_30_epoch.h5'
+MODEL_PATH = './/assets//Best_CNN_march_30_epoch.h5'
 LITE_MODEL_PATH = './assets/cnn.tflite'
 LABEL_PATH = './assets/labels.txt'
 
@@ -75,7 +76,6 @@ def ProcessImage(img_path):
     new_file = img_path + "-new-diseased.jpg" 
     perc_disease = DisplayDiseasePercentage(Disease)
 
-    # print(new_file)
     cv2.imwrite(new_file , Disease)
 
     return (new_file,perc_disease)
