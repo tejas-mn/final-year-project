@@ -7,10 +7,9 @@ def create_app():
     app.config["SECRET_KEY"] = "123"
     app.config['DEBUG'] = True
     app.register_blueprint(main)
-    scheduleDelete('static', 8) 
     return app
 
 if __name__=="__main__":
     app = create_app()
+    scheduleDelete('static', 2) 
     app.run(debug=True)
-

@@ -26,7 +26,7 @@
             "Dilution in water (L)" : "500 L",
             "Waiting period from last application to harvest (days)" : "12 days",
             "link" : "https://www.amazon.in/Katyayani-AZOXYSTROBIN-Systemic-Fungicide-Powerful/dp/B09J8Y5FNX",
-            "img" : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/71xA6n4laxL._SL1500_.jpg",
+            "img" : "https://cdn.shopify.com/s/files/1/0722/2059/products/KO1_1800x1800.png",
             "dec" : ""
             
         },
@@ -115,7 +115,7 @@
             "id": "9",
             "name": "Metiram 55% + Pyraclostrobin 5% WG",
             "disease" : "Potato_Late_blight",
-            "Dosage" : "900-1050 gm",
+            "Dosage per ha" : "900-1050 gm",
             "a.i. (g)" : "1500-1750 gm",
             "Formulation (g/ml)/%" : "",
             "Dilution in water (L)" : "1.0 - 1.5 Gm / Liter water",

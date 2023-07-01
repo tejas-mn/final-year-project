@@ -180,7 +180,7 @@ to {
     /*overflow: hidden; */
   }
 
-  .rssapp-list {
+  iframe > .rssapp-list {
     max-width: 95% !important;
   }
 
