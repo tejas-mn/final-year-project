@@ -1,2 +1,3 @@
 # final-year-project
-![image](https://github.com/tejas-mn/final-year-project/assets/68629215/deb842dc-7a58-4d4c-b7c0-5472dbb37e45)
+
+![2024-02-18 18-17-17 (2)](https://github.com/tejas-mn/final-year-project/assets/68629215/9a8e5c08-a7a2-4338-83ca-ba3be4ba462d)
